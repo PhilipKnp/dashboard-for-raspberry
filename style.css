@@ -1,0 +1,243 @@
+html {
+    height: 480px;
+    width: 800px;
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0 auto;
+}
+
+
+#container {
+    height: 480px;
+    width: 800px;
+    background-color: black;
+
+    display: grid;
+    grid-template-columns: repeat(5, 160px);
+    grid-template-rows: repeat(5, 96px);
+    align-items: center;
+}
+
+.time-big {
+    grid-area: 1 / 1 / 4 / 5;
+    justify-self: start;
+
+    color: white;
+    font-size: 160px;
+    font-family: 'Open Sans', sans-serif;
+
+    margin-left: 40px;
+}
+
+#location {
+    grid-area: 1 / 1 / 4 / 6;
+    justify-self: end;
+    align-self: center;
+
+    color: white;
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 0 60px 60px 0;
+}
+
+#weather-icon {
+    grid-area: 2 / 4 / 3 / 6;
+    justify-self: start;
+    align-self: end;
+
+    color: white;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 0 0 -15px 0;
+}
+
+#current-temperature {
+    grid-area: 1 / 1 / 4 / 6;
+    justify-self: end;
+    align-self: center;
+
+    color: white;
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 60px 60px 0 0;
+}
+
+#current-temperature-feeling {
+    grid-area: 1 / 1 / 4 / 6;
+    justify-self: end;
+    align-self: center;
+
+    color: white;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 150px 60px 0 0;
+}
+
+.date-big {
+    grid-area: 3 / 1 / 5 / 6;
+    justify-self: center;
+
+    color: white;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#controlling {
+    grid-area: 5 / 1 / 5 / 6;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.controlling-button {
+    height: 80px;
+    width: 220px;
+    background-color: black;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+/*********************ALARM***************************/
+
+#return-button {
+    grid-area: 1 / 1 / 1 / 1;
+    margin-left: 20px;
+    z-index: 1000;
+}
+
+.time-small {
+    grid-area: 1 / 5 / 1 / 6;
+    align-self: start;
+    justify-self: end;
+
+    color: white;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 10px 20px 0 0;
+    z-index: 1000;
+}
+
+.date-small {
+    grid-area: 1 / 2 / 1 / 5;
+    align-self: start;
+    justify-self: center;
+
+    color: white;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 10px 20px 0 0;
+    z-index: 1000;
+}
+
+#alarm-control {
+    grid-area: 2 / 2 / 4 / 5;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border-radius: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-picker {
+    height: 50px;
+    width: 125px;
+    background-color: black;
+
+    color: white;
+    font-size: 28px;
+
+    border-radius: 5px;
+}
+
+.time-controll {
+    height: 60px;
+    width: 150px;
+    background-color: black;
+
+    color: white;
+    font-size: 28px;
+
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+#alarm-controlling {
+    grid-area: 4 / 1 / 7 / 6;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.controlling-alarm-button {
+    height: 80px;
+    width: 220px;
+    background-color: black;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+/*********************MUSIC***************************/
+#music-control {
+    grid-area: 2 / 1 / 5 / 6;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border-radius: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.music-picker {
+    height: 100px;
+    width: 200px;
+    background-color: black;
+
+    color: white;
+    font-size: 36px;
+
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+/*******************************LOFI SITE*******************************/
+#music-fullscreen {
+    grid-area: 1 / 1 / 6 / 6;
+    height: 100%;
+}
+
+.shadow {
+    grid-area: 1 / 1 / 1 / 6;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%, rgba(255,255,255,0) 100%); 
+    z-index: 999;
+}
